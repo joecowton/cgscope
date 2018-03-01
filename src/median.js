@@ -1,13 +1,14 @@
 function median(arr) {
-	const numOfInts = arr[0];
-	let total = 0;
+	const arrLength = arr[0];
+	const sortedArray = arr.slice(1).sort();
 
-	for (let i = 1; i <= numOfInts; i++) {
-		total += arr[i];
+	let index = Math.floor(arrLength / 2);
+
+	if (arrLength % 2 !== 0) {
+		return sortedArray[index];
 	}
-	const median = total / numOfInts;
 
-	return median;
+	return (sortedArray[index - 1] + sortedArray[index]) / 2;
 }
 
 module.exports = median;
