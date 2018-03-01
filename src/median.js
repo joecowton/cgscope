@@ -1,12 +1,12 @@
-function median(n) {
-	const numOfInts = n[0];
-	const ints = n;
-	let median = 0;
-	console.log(numOfInts);
+function median(arr) {
+	const numOfInts = arr[0];
+	let total = 0;
 
 	for (let i = 1; i <= numOfInts; i++) {
-		median += ints[i];
+		total += arr[i];
 	}
+	const median = total / numOfInts;
+
 	return median;
 }
 
