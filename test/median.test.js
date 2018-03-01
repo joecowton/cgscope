@@ -12,4 +12,8 @@ describe('Median', () => {
 	it('correctly returns output when input is [2, 1, 2]', () => {
 		expect(median([2, 1, 2])).toEqual(1.5);
 	});
+
+	it('correctly returns output when input is [3, 1, 2, 3]', () => {
+		expect(median([3, 1, 2, 3])).toEqual(2);
+	});
 });
